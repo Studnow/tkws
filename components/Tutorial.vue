@@ -75,6 +75,7 @@
           >. Have fun!
         </p>
       </div>
+      <PostList />
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"
           ><svg
@@ -116,7 +117,9 @@
 </template>
 
 <script>
+import PostList from './PostList.vue'
 export default {
   name: 'NuxtTutorial',
+  components: { PostList },
 }
 </script>

@@ -1,14 +1,39 @@
 <template>
-  <Tutorial />
+  <!-- <Tutorial :posts="posts"/> -->
+  <div id="app">
+    <Header />
+    <PostList :posts="posts" />
+    <SomeList :some="some" />
+    <NuxtContent :document="doc" />
+    <!-- <NuxtContent :document="some" /> -->
+  </div>
 </template>
 
 <script>
+import Header from '~/components/Header.vue';
 export default {
-  name: 'IndexPage',
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    };
-  },
+    name: "IndexPage",
+    head() {
+        return {
+            script: [{ src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }],
+        };
+    },
+    async asyncData({ $content }) {
+        const posts = await $content("blog").fetch();
+        const doc = await $content("hello").fetch();
+        const some = await $content("some").fetch();
+        return {
+            posts,
+            doc,
+            some
+        };
+    },
+    // async asyncData({ $content }) {
+    //     const doc = await $content("hello").fetch();
+    //     return {
+    //         doc,
+    //     };
+    // },
+    components: { Header }
 }
 </script>
