@@ -6,3 +6,5 @@ description: I write this post to check out my blog work
 # This is post
 
 For my blog on Netlify CMS. Hi there.
+
+Pew Pew Пынь пынь.
