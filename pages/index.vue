@@ -11,6 +11,10 @@
         <h4 class="font-bold text-xl">Links from some collection</h4>
         <SomeList :some="some" />
       </div>
+      <div class="some mx-auto">
+        <h4 class="font-bold text-xl">Links from Root collection</h4>
+        <Root :rootPosts="rootPosts" />
+      </div>
     </div>
     <NuxtContent class="mt-8" :document="doc" />
     <!-- <NuxtContent :document="some" /> -->
@@ -32,10 +36,12 @@ export default {
     const posts = await $content('blog').fetch()
     const doc = await $content('hello').fetch()
     const some = await $content('some').fetch()
+    const rootPosts = await $content('pages/blog').fetch()
     return {
       posts,
       doc,
       some,
+      rootPosts
     }
   },
   // async asyncData({ $content }) {

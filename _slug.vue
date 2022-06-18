@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <h2>{{ post.title }}</h2>
     <nuxt-content :document="post" />
@@ -21,4 +21,4 @@ export default {
     };
   },
 };
-</script>
+</script> -->
