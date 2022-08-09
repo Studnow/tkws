@@ -2,6 +2,7 @@
 title: My blog first article
 date: 2022-06-17T13:09:35.396Z
 description: I write this post to check out my blog work
+thumbnail: /img/small-funiro-first.webp
 ---
 
   <nav class="hidden md:block">
@@ -14,7 +15,7 @@ description: I write this post to check out my blog work
     </ul>
   </nav>
 
-# This is post
+# This is a post
 
 For my blog on Netlify CMS. Hi there.
 
